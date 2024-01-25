@@ -1,0 +1,528 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    height:270vh;
+    width:100vw;
+    background-color: #1a1919;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #545353;
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: black;
+  }
+  
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: #545353 black;
+  }
+
+  #navHead {
+    height: 10%;
+    width: 100%;
+    padding: 0 2% 0 2%;
+    font-family: "Roboto", sans-serif;
+    color: #545353;
+     background-color: black; 
+    margin-bottom: 4%;
+    border-radius:0 0 15px 15px;
+    border: 5px solid white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1500;
+  }
+
+  #welcomeLogo {
+    font-size: 23px;
+    color: #9c9a9a;
+  }
+
+  .navElements {
+    text-decoration: none;
+     color: #545353; 
+    transition-property: all;
+    transition-duration: 0.25s;
+    font-weight: 100;
+  }
+  
+  #navElements:hover {
+    scale: 1.5 1.5;
+    color:aqua;
+  }
+
+
+  .dynamicWindow {
+    position: absolute;
+     top: 18vh; 
+    width: 70vw; 
+    height: 65vh;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #loadingSpinner {
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-top: 5px dotted #24bfd4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1000;
+  }
+  
+  #image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-out;
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #info{
+    height:40vh;
+    width:80vw;
+    position: absolute;
+    top:85vh;
+    padding: 2%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Shadows Into Light', cursive;
+    color:white;
+    font-size: 50px;
+  }
+
+  #navMeme {
+    position: absolute;
+    top: 130vh;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    background-color: black;
+    font-family: "Menlo", "Consolas", "Monaco", monospace;
+    padding: 1.5%;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    z-index: 1;
+  }
+  
+  #navMeme::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  #navMeme::-webkit-scrollbar-thumb {
+    background-color: #545353;
+    border-radius: 6px;
+  }
+  
+  #navMeme {
+    scrollbar-width: thin;
+    scrollbar-color: #545353;
+  }
+  
+  .code {
+    margin-bottom: 0.5%;
+  }
+  
+  .nameClass {
+    margin-left: 1.5%;
+    color: orange;
+  }
+  
+  #include {
+    color: purple;
+  }
+  
+  #fullName {
+    color: orange;
+  }
+  
+  #string {
+    color: aqua;
+  }
+  
+  #print {
+    color: white;
+  }
+  
+  #comment {
+    color: gray;
+  }
+  
+  #console {
+    color: white;
+    font-family: sans-serif;
+  }
+  
+  #callOut {
+    color: white;
+  }
+  
+  #output {
+    color: green;
+  }
+  
+  #sudo {
+    color: greenyellow;
+  }
+
+
+  #content {
+    position: absolute;
+    top: 190vh;
+    height: 60vh;
+    width: 60vw;
+    background-color: black;
+    border-radius: 13px;
+    padding: 2%;
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    color: #9c939a;
+  }
+  
+  #mainContent {
+    height: 70%;
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    overflow: auto;
+  }
+  
+  #mainContent::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  #mainContent::-webkit-scrollbar-thumb {
+    background-color: #545353;
+    border-radius: 6px;
+  }
+  
+  .divAnchors {
+    text-decoration: none;
+  }
+  
+  .hobbyIcons {
+    height: 30%;
+    width: 80%;
+    margin: 2% 10% 2% 10%;
+    background-color: #1a1919;
+    border-radius: 10px;
+    padding: 2%;
+    color: white;
+    transition-property: all;
+    transition-duration: 0.25s;
+  }
+  
+  .hobbyIcons:hover {
+    translate: 3%;
+  }
+  
+  .hobbyIcons:active {
+    scale: 1.2 1.2;
+  }
+  
+  #chess {
+    background-color: #eb05b5;
+  }
+  
+  #coding {
+    background-color: #ff0f37;
+  }
+  
+  #sketching {
+    background-color: #0231c9;
+  }
+  
+  #movies {
+    background-color: #c95c02;
+  }
+  
+  #music {
+    background-color: #139602;
+  }
+
+  @media(max-width:1120px) {
+    #info{
+      font-size:45px;
+      top: 70vh;
+    }
+
+    #navMeme{
+      top: 120vh;
+    }
+  }
+
+  @media(max-width:816px) {
+    #info{
+      font-size: 40px;
+    }
+
+    .hobbyIcons{
+      height: 25%;
+      margin-bottom: 4%;
+    }
+  }
+
+  @media(max-width:805px){
+    .dynamicWindow{
+      top:22vh;
+    }
+
+    .hobbyIcons{
+      font-size: 20px;
+    }
+
+    #navMeme{
+      font-size: 0.8rem;
+    }
+  }
+
+  @media(max-width: 692px){
+    #info{
+      font-size: 10px;
+    }
+  }
+
+  @media(max-width:650px) {
+    .dynamicWindow{
+      height:75vh;
+      width:85vw;
+      
+    }
+
+    #info{
+      font-size: 35px;
+      top:78vh;
+    }
+
+    .navElements {
+      font-size: 12px ;
+    }
+
+    #navMeme{
+      top:125vh;
+    }
+
+    #content{
+      top:184vh;
+    }
+    
+    #navMeme{
+      height: 55vh;
+      top: 123vh;
+    }
+  }
+
+  @media(max-width:538px){
+    #info{
+      font-size: 30px;
+      top:78vh;
+    }
+
+    .dynamicWindow{
+      height: 80vh;
+      width:90vw;
+      left:5vw;
+    }
+
+    #loadingSpinner{
+      top:20%;
+      left:50%;
+    }
+  }
+
+  @media(max-width:490px){
+    #welcomeLogo{
+    font-size: 18px;
+    }
+  }
+
+  @media(max-width:460px){
+    #navMeme{
+      height: 58vh;
+      width: 68vw;
+      top: 137vh;
+    }
+
+    #content{
+      top: 210vh;
+    }
+
+    body{
+      height: 280vh;
+    }
+
+    #info{
+      font-size: 40px;
+    }
+
+    .hobbyIcons{
+      font-size: 16px;
+    }
+  }
+
+
+  @media(max-width:380px){
+    #info{
+      font-size: 35px;
+    }
+
+    .hobbyIcons{
+      height: 23%;
+      margin-bottom: 5%;
+    }
+
+    .navElements{
+      font-size: 9px;
+    }
+  }
+
+  @media(max-width:308px){
+    #info{
+      top: 73vh;
+    }
+
+    #content{
+      width: 68vw;
+    }
+
+    #navMeme{
+      top: 142vh;
+    }
+
+    .dynamicWindow{
+      top: 18vh;
+    }
+  }
+
+  @media(max-height:570px){
+
+    #navHead{
+      height: 15%;
+    }
+
+    .dynamicWindow{
+      top: 23vh;
+    }
+
+    #info{
+      font-size: 40px;
+      top:89vh;
+    }
+
+    .hobbyIcons{
+      font-size: 17px;
+    }
+
+    #navMeme{
+      top: 133vh;
+    }
+  }
+
+  @media(max-height:478px){
+    #content{
+      top: 200vh;
+      font-size: 24px;
+    }
+
+    #navMeme{
+      top: 145vh;
+    }
+
+    #info{
+      top: 97vh;
+    }
+
+    .hobbyIcons{
+      font-size: 17px;
+    }
+
+    .dynamicWindow{
+      width: 60vw;
+    }
+  }
+
+  @media(max-height: 411px){
+    #image{
+      height: 65vh;
+    }
+
+    #info{
+      font-size: 25px;
+    }
+  }
+
+  @media(max-height:358px){
+    #info{
+      font-size: 35px;
+    }
+
+    .dynamicWindow{
+      width: 50vw;
+      top: 26vh;
+    }
+
+    #content{
+      font-size: 21px;
+    }
+
+    .hobbyIcons{
+      font-size: 17px;
+    }
+
+    #navHead{
+      height: 19%;
+    }
+  }
+
+  @media(max-height:332px){
+    #navMeme{
+      font-size: 0.7rem;
+    }
+  }
+
+  @media(max-height: 290px){
+    #info{
+      font-size: 25px;
+    }
+  }
+
+   @media(min-width:887px) and (min-height:555px) and (max-width:1133px) and (max-height: 768px){
+    #info{
+      font-size: 35px;
+      top: 80vh;
+    }
+  }

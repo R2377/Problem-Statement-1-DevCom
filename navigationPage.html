@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Page</title>
+    <link href="styleNavigationPage.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="navHead">
+      <!--Basically adding a navigation bar which has Social Media account links and 'About Me' page-->
+      <div id="welcomeLogo">Welcome</div>
+      <a href="aboutMe.html" class="navElements">About Me</a>
+      <a href="#" class="navElements"
+        >Instagram <i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="#" class="navElements"
+        >Github <i class="fa-brands fa-github"></i
+      ></a>
+      <a href="#" class="navElements"
+        >Linked <i class="fa-brands fa-linkedin"></i
+      ></a>
+    </div>
+
+    <div class="dynamicWindow">
+      <!--Adding a dynamic window-->
+      <div id="loadingSpinner"></div>
+      <img id="image" src="stockImage4.jpg" alt="dynamic window." />
+    </div>
+
+    <div id="info">
+      This is the Navigation Page. Navigate yourself to your favourite content.
+      Access the scroll at bottom.
+    </div>
+
+    <div id="navMeme">
+      <div class="code" id="include">class Rudra :</div>
+      <br />
+      <div class="nameClass" class="code" id="fullName">
+        fullName: "Rudra G.",
+      </div>
+      <br />
+      <div class="nameClass" class="code" id="age">age: 19,</div>
+      <br />
+      <div class="nameClass" class="code" id="function">
+        def getHobbies() { return creativity; }
+      </div>
+      <br />
+      <div class="code" id="callOut">x = Rudra.getHobbies();</div>
+      <br />
+      <div class="code" id="string">
+        string = "I've got no strings to hold me down To make me fret, or make
+        me frown I had strings, but now I'm free There are no strings on me"
+      </div>
+      <br />
+      <div class="code" id="print">print(x);</div>
+      <br />
+      <div class="code" id="comment">
+        # I know you are impressed by my portfolio. I'm sure i'll get recruited.
+      </div>
+      <br />
+      <div class="code" id="console">Output</div>
+      <br />
+      <div class="code" id="output">
+        C:\users\Rudra $ ~ chess, sketching and listning to music. Code returned
+        with exit code 0.
+      </div>
+      <br />
+      <div class="code" id="sudo">sudo make me a DevCom Recruit</div>
+      <br />
+    </div>
+
+    <div id="content">
+      <!--A space where my hobbies will be listed-->
+      Contents
+      <div id="mainContent">
+        <a href="chess.html" class="divAnchors"
+          ><div class="hobbyIcons" id="chess">
+            Chess <i class="fa-solid fa-chess"></i></div
+        ></a>
+        <a href="code.html" class="divAnchors"
+          ><div class="hobbyIcons" id="coding">
+            Programming <i class="fa-solid fa-code"></i></div
+        ></a>
+        <a href="sketch.html" class="divAnchors"
+          ><div class="hobbyIcons" id="sketching">
+            Sketching <i class="fa-solid fa-pencil"></i></div
+        ></a>
+        <a href="movies.html" class="divAnchors"
+          ><div class="hobbyIcons" id="movies">
+            Movies <i class="fa-solid fa-tv"></i></div
+        ></a>
+        <a href="music.html" class="divAnchors"
+          ><div class="hobbyIcons" id="music">
+            Music <i class="fa-solid fa-music"></i></div
+        ></a>
+      </div>
+    </div>
+
+    <script src="funcNavPage.js"></script>
+  </body>
+</html>
