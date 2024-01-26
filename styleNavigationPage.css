@@ -62,7 +62,7 @@ body::-webkit-scrollbar {
     font-weight: 100;
   }
   
-  #navElements:hover {
+  .navElements:hover {
     scale: 1.5 1.5;
     color:aqua;
   }
